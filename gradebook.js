@@ -8,3 +8,29 @@
 // 60 <= score < 70	'D'
 // 0 <= score < 60	'F'
 // Tested values are all between 0 and 100. Theres is no need to check for negative values or values greater than 100.
+
+function getGrade(s1, s2, s3) {
+  //getting the average of 3 scores
+  let avg = (s1 + s2 + s3) / 3;
+  //Defining Grade
+  let grade;
+  //Using switch statement instead of if-else
+  switch (true) {
+    case avg < 60:
+      grade = "F";
+      break;
+    case avg > 60 && avg < 70:
+      grade = "D";
+      break;
+    case avg >= 70 && avg < 80:
+      grade = "C";
+      break;
+    case avg >= 80 && avg < 90:
+      grade = "B";
+      break;
+    case avg >= 90 && avg <= 100:
+      grade = "A";
+      break;
+  }
+  return grade;
+}
