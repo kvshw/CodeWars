@@ -20,10 +20,14 @@
 
 function nbYear(p0, percent, aug, p) {
   // create a variable for years
+
   let years = 0;
+  percent = percent / 100;
   // creating the while loop to iterate
+
   while (p0 < p) {
-    p0 += p0 * (percent / 100) + aug;
+    //edge case of floating point
+    p0 = Math.floor(p0 + p0 * percent + aug);
     years++;
   }
 
