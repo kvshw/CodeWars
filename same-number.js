@@ -39,10 +39,10 @@ function comp(array1, array2) {
 
   // Check if each element in sortedArray2 is the square of the corresponding element in sortedArray1
   for (let i = 0; i < sortedArray1.length; i++) {
-    if (sortedArray1[i] * sortedArray1[i] == sortedArray2[i]) {
-      return true;
+    if (sortedArray1[i] * sortedArray1[i] !== sortedArray2[i]) {
+      return false;
     }
   }
 
-  return false;
+  return true;
 }
